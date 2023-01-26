@@ -157,7 +157,8 @@ static bool dln2_gpio_pin_enable(struct dln2_slot *slot, bool enable)
             gpio_set_function(pin, GPIO_FUNC_SIO);
             // http://dlnware.com/dll/Default-Configuration
             gpio_set_dir(pin, GPIO_IN);
-            gpio_pull_up(pin);
+            // TODO: Make this configurable (needs changes in the kernel device driver).
+            // gpio_pull_up(pin);
         }
     } else {
         int res = dln2_pin_free(pin, DLN2_MODULE_GPIO);
