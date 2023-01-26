@@ -13,8 +13,7 @@
 #ifndef _DLN2_H_
 #define _DLN2_H_
 
-#include <stdbool.h>
-#include <stdint.h>
+#include "pico/types.h"
 #include "common/tusb_common.h"
 
 #define DLN2_MODULE_GENERIC     0x00
